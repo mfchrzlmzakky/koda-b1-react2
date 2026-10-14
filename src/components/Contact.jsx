@@ -58,7 +58,7 @@ const Contact = () => {
   }
   return (
     <section className="flex flex-col items-center justify-center text-gray-600">
-      <h1 className="mt-7">Kritik & Saran</h1>
+      <h1 className="mt-7 font-medium">Kritik & Saran</h1>
       <form action="" onSubmit={handleSubmit} className="flex flex-col mt-5 w-sm">
         <label htmlFor="email">Email</label>
         <input type="email" id="email" name="email" onChange={handleChange} value={form.email} className="p-1 border rounded-sm my-1" />
@@ -68,11 +68,11 @@ const Contact = () => {
           <label htmlFor="">Jenis Kelamin</label>
           <span className="align-middle">
             <label className="mr-3">
-              <input type="radio" name="gender" onChange={handleChange} value="male" className="mr-1" />
+              <input type="radio" name="gender" onChange={handleChange} value="male" checked={form.gender === "male"} className="mr-1" />
               Laki-Laki
             </label>
             <label className="align-middle">
-              <input type="radio" name="gender" onChange={handleChange} value="female" className="mr-1" />
+              <input type="radio" name="gender" onChange={handleChange} value="female" checked={form.gender === "female"} className="mr-1" />
               Perempuan
             </label>
           </span>
